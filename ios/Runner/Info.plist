@@ -49,6 +49,7 @@
 	<string>This app needs access to location when open to track leads.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This app needs access to location when in the background to track leads.</string>
+<<<<<<< HEAD
 	<key>NSFaceIDUsageDescription</key>
 	<string>This app requires Face ID to secure your data and provide quick access.</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -61,4 +62,7 @@
 	</array>
 </dict>
 
+=======
+</dict>
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 </plist>

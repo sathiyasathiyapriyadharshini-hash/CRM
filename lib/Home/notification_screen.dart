@@ -96,7 +96,11 @@ class _NotificationScreenState extends State<NotificationScreen> {
       builder: (context, child) {
         return Theme(
           data: Theme.of(context).copyWith(
+<<<<<<< HEAD
             colorScheme: const ColorScheme.light(primary: Color(0xFF26A69A)),
+=======
+            colorScheme: const ColorScheme.light(primary: Color(0xFF6B4195)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           ),
           child: child!,
         );
@@ -136,7 +140,11 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: const Color(0xFF26A69A),
+=======
+        backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -201,7 +209,11 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           vertical: 9,
                         ),
                         decoration: BoxDecoration(
+<<<<<<< HEAD
                           color: const Color(0xFF26A69A),
+=======
+                          color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: const Row(
@@ -268,14 +280,24 @@ class _NotificationScreenState extends State<NotificationScreen> {
         margin: const EdgeInsets.only(right: 8),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
+<<<<<<< HEAD
           color: isSelected ? const Color(0xFF26A69A) : Colors.white,
           borderRadius: BorderRadius.circular(25),
           border: Border.all(color: const Color(0xFF26A69A)),
+=======
+          color: isSelected ? const Color(0xFF6B4195) : Colors.white,
+          borderRadius: BorderRadius.circular(25),
+          border: Border.all(color: const Color(0xFF6B4195)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         ),
         child: Text(
           label,
           style: TextStyle(
+<<<<<<< HEAD
             color: isSelected ? Colors.white : const Color(0xFF26A69A),
+=======
+            color: isSelected ? Colors.white : const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             fontWeight: FontWeight.w500,
           ),
         ),

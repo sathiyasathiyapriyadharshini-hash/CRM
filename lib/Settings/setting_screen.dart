@@ -4,6 +4,7 @@ import 'package:crm/Settings/help_support_screen.dart';
 import 'package:crm/Settings/security_settings_screen.dart';
 import 'package:crm/Settings/app_preference_screen.dart';
 import 'package:crm/SignIn/signin.dart';
+<<<<<<< HEAD
 import 'package:crm/SignIn/splash.dart';
 import 'package:crm/services/profile_service.dart';
 import 'package:crm/utils/preference_service.dart';
@@ -11,6 +12,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+=======
+import 'package:flutter/material.dart';
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
 class SettingScreen extends StatefulWidget {
   final VoidCallback? onBack;
@@ -22,6 +26,7 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
+<<<<<<< HEAD
   String _name = 'Loading...';
   String _mobile = '...';
   String _location = 'Fetching location...';
@@ -107,12 +112,18 @@ class _SettingScreenState extends State<SettingScreen> {
     }
   }
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.white,
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: const Color(0xFF26A69A),
+=======
+        backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -128,6 +139,7 @@ class _SettingScreenState extends State<SettingScreen> {
         ),
         centerTitle: false,
       ),
+<<<<<<< HEAD
       body: _isLoading
           ? const Center(
               child: CircularProgressIndicator(color: Color(0xFF26A69A)),
@@ -313,12 +325,154 @@ class _SettingScreenState extends State<SettingScreen> {
                         title: 'Logout',
                         iconColor: Colors.red,
                         isLastItem: true,
+=======
+      body: Column(
+        children: [
+          // Profile Header Section
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: const BoxDecoration(color: Color(0xFF465583)),
+            child: Row(
+              children: [
+                // Profile Image
+                Container(
+                  width: 70,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Color(0xFF871A1A), width: 2),
+                    image: const DecorationImage(
+                      image: AssetImage(
+                        'assets/images/user_avatar.png',
+                      ), // Placeholder for Harish's photo
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 15),
+                // User Details
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          const Text(
+                            'Harish',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          const Text(
+                            'Edit',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 12,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                          const SizedBox(width: 4),
+                          const Icon(
+                            Icons.edit,
+                            color: Colors.white70,
+                            size: 12,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      const Text(
+                        '1122333444',
+                        style: TextStyle(color: Colors.white, fontSize: 14),
+                      ),
+                      const SizedBox(height: 4),
+                      Row(
+                        children: [
+                          const Text(
+                            'View Full Profile',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          // Active Badge (now specifically placed here)
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 6,
+                            ),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF4CAF50),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: const Text(
+                              'Active',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                        ],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                       ),
                     ],
                   ),
                 ),
               ],
             ),
+<<<<<<< HEAD
+=======
+          ),
+          Divider(height: 1, color: Theme.of(context).dividerColor),
+
+          // Settings List
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                _buildSettingItem(
+                  icon: 'assets/icons/acc_setting.png',
+                  title: 'Account Setting',
+                  iconColor: const Color(0xFF6B4195),
+                ),
+                _buildSettingItem(
+                  icon: 'assets/icons/noti.png',
+                  title: 'Notification & Alerts',
+                  iconColor: Colors.orange,
+                ),
+                _buildSettingItem(
+                  icon: 'assets/icons/help.png',
+                  title: 'Help & Support',
+                  iconColor: Colors.blue,
+                ),
+                _buildSettingItem(
+                  icon: 'assets/icons/security.png',
+                  title: 'Security & Settings',
+                  iconColor: Colors.orangeAccent,
+                ),
+                _buildSettingItem(
+                  icon: Icons.settings_applications_outlined,
+                  title: 'App Preference',
+                  iconColor: const Color(0xFF6B4195),
+                ),
+                _buildSettingItem(
+                  icon: Icons.logout_outlined,
+                  title: 'Logout',
+                  iconColor: Colors.red,
+                  isLastItem: true,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     );
   }
 
@@ -379,6 +533,7 @@ class _SettingScreenState extends State<SettingScreen> {
                       child: SizedBox(
                         height: 45,
                         child: ElevatedButton(
+<<<<<<< HEAD
                           onPressed: () async {
                             final prefs = await SharedPreferences.getInstance();
                             final String ledId =
@@ -444,6 +599,17 @@ class _SettingScreenState extends State<SettingScreen> {
                                 (route) => false,
                               );
                             }
+=======
+                          onPressed: () {
+                            // TODO: Implement actual logout logic
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SignInScreen(),
+                              ),
+                              (route) => false,
+                            );
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF23315D),

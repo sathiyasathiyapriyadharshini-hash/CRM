@@ -17,7 +17,11 @@ class _AddActivityDetailScreenState extends State<AddActivityDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     const Color primaryPurple = Color(0xFF26A69A);
+=======
+    const Color primaryPurple = Color(0xFF6B4195);
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,

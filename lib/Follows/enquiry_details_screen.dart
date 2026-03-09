@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:url_launcher/url_launcher.dart';
 import 'add_activity_detail_screen.dart';
 import '../services/lead_service.dart';
@@ -6,6 +7,12 @@ import '../services/lead_service.dart';
 class EnquiryDetailsScreen extends StatefulWidget {
   final Map<String, dynamic>? lead;
   const EnquiryDetailsScreen({super.key, this.lead});
+=======
+import 'add_activity_detail_screen.dart';
+
+class EnquiryDetailsScreen extends StatefulWidget {
+  const EnquiryDetailsScreen({super.key});
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
   @override
   State<EnquiryDetailsScreen> createState() => _EnquiryDetailsScreenState();
@@ -21,6 +28,7 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
   String _selectedSchedule = 'Schedule Follow-up For';
   String _selectedStage = 'Current Stage';
 
+<<<<<<< HEAD
   List<dynamic> _timelineData = [];
   bool _isLoadingTimeline = false;
 
@@ -59,6 +67,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     const Color primaryPurple = Color(0xFF26A69A);
+=======
+  @override
+  Widget build(BuildContext context) {
+    const Color primaryPurple = Color(0xFF6B4195);
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
     return Scaffold(
       appBar: AppBar(
@@ -96,9 +109,15 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                     ),
                     child: Row(
                       children: [
+<<<<<<< HEAD
                         _buildTabItem('Information', 0),
                         const SizedBox(width: 8),
                         _buildTabItem('Over View', 1),
+=======
+                        _buildTabItem('Over View', 0),
+                        const SizedBox(width: 8),
+                        _buildTabItem('Information', 1),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         const SizedBox(width: 8),
                         _buildTabItem('Timeline', 2),
                       ],
@@ -187,6 +206,7 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                           ],
                         ),
 
+<<<<<<< HEAD
                         // const SizedBox(height: 16),
                         // Text(
                         //   'Lead Stage',
@@ -255,6 +275,76 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                         //     }),
                         //   ],
                         // ),
+=======
+                        const SizedBox(height: 16),
+                        Text(
+                          'Lead Stage',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                            color: Theme.of(
+                              context,
+                            ).textTheme.titleSmall?.color,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+
+                        // Current Stage Custom Dropdown
+                        _buildCustomExpandable(
+                          title: _selectedStage,
+                          isExpanded: _isStageExpanded,
+                          onToggle: () {
+                            setState(() {
+                              _isStageExpanded = !_isStageExpanded;
+                              if (_isStageExpanded) _isScheduleExpanded = false;
+                            });
+                          },
+                          children: [
+                            _buildExpandedItem('Intrested', () {
+                              setState(() {
+                                _selectedStage = 'Intrested';
+                                _isStageExpanded = false;
+                              });
+                            }),
+                            _buildExpandedItem('Meeting Booked', () {
+                              setState(() {
+                                _selectedStage = 'Meeting Booked';
+                                _isStageExpanded = false;
+                              });
+                            }),
+                            _buildExpandedItem('Proposal', () {
+                              setState(() {
+                                _selectedStage = 'Proposal';
+                                _isStageExpanded = false;
+                              });
+                            }),
+                            _buildExpandedItem('Negotiating', () {
+                              setState(() {
+                                _selectedStage = 'Negotiating';
+                                _isStageExpanded = false;
+                              });
+                            }),
+                            _buildExpandedItem('Close - Won', () {
+                              setState(() {
+                                _selectedStage = 'Close - Won';
+                                _isStageExpanded = false;
+                              });
+                            }),
+                            _buildExpandedItem('Close - Lost', () {
+                              setState(() {
+                                _selectedStage = 'Close - Lost';
+                                _isStageExpanded = false;
+                              });
+                            }),
+                            _buildExpandedItem('Uncontactable', () {
+                              setState(() {
+                                _selectedStage = 'Uncontactable';
+                                _isStageExpanded = false;
+                              });
+                            }),
+                          ],
+                        ),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                       ],
                     ),
                   ),
@@ -267,6 +357,7 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+<<<<<<< HEAD
                         // _buildDetailField(
                         //   'Project Value',
                         //   widget.lead?['budget']?.toString() ?? 'N/A',
@@ -315,6 +406,17 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                                       widget.lead?['call_date'])
                                   ?.toString() ??
                               'N/A',
+=======
+                        _buildDetailField('Project Value', '₹20,00,00'),
+                        _buildDetailField('Name', 'Ganesh'),
+                        _buildDetailField('Lead No', 'L001'),
+                        _buildDetailField('Phone No', '7894561231'),
+                        _buildDetailField('WhatsApp No', '7894561231'),
+                        _buildDetailField('Email ID', 'Ganesh@gmail.com'),
+                        _buildDetailField(
+                          'Date Created',
+                          '05 December 2025 - 10:45 AM',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           isLast: true,
                         ),
                       ],
@@ -353,6 +455,7 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     _buildProfileInfoLine(
+<<<<<<< HEAD
                                       'Name',
                                       (widget.lead?['le_name'] ??
                                                   widget.lead?['cus_name'])
@@ -378,6 +481,19 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                                                   widget.lead?['call_date'])
                                               ?.toString() ??
                                           'N/A',
+=======
+                                      'Company Name',
+                                      'Harish',
+                                    ),
+                                    _buildProfileInfoLine('Project', 'CRM'),
+                                    _buildProfileInfoLine(
+                                      'Report',
+                                      'Enquiry Report',
+                                    ),
+                                    _buildProfileInfoLine(
+                                      'Date Range',
+                                      '12-09-2025 - 25-09-2025',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                     ),
                                   ],
                                 ),
@@ -386,7 +502,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                                 alignment: Alignment.topRight,
                                 child: Icon(
                                   Icons.edit_square,
+<<<<<<< HEAD
                                   color: Color(0xFF26A69A),
+=======
+                                  color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                   size: 24,
                                 ),
                               ),
@@ -415,6 +535,7 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+<<<<<<< HEAD
                               // _buildDetailField(
                               //   'Project Value',
                               //   widget.lead?['budget']?.toString() ?? 'N/A',
@@ -509,6 +630,17 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                               _buildDetailField(
                                 'Pincode',
                                 widget.lead?['pincode']?.toString() ?? 'N/A',
+=======
+                              _buildDetailField('Project Value', '₹20,00,00'),
+                              _buildDetailField('Name', 'Ganesh'),
+                              _buildDetailField('Lead No', 'L001'),
+                              _buildDetailField('Phone No', '7894561231'),
+                              _buildDetailField('WhatsApp No', '7894561231'),
+                              _buildDetailField('Email ID', 'Ganesh@gmail.com'),
+                              _buildDetailField(
+                                'Date Created',
+                                '05 December 2025 - 10:45 AM',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                 isLast: true,
                               ),
                             ],
@@ -626,7 +758,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                                       child: Center(
                                         child: Container(
                                           width: 1,
+<<<<<<< HEAD
                                           color: const Color(0xFF26A69A),
+=======
+                                          color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                         ),
                                       ),
                                     ),
@@ -636,6 +772,7 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                               ),
 
                               // Timeline Items
+<<<<<<< HEAD
                               if (_isLoadingTimeline)
                                 const Center(
                                   child: CircularProgressIndicator(
@@ -675,6 +812,55 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                                     isLast: isLast,
                                   );
                                 }).toList(),
+=======
+                              _buildTimelineItem(
+                                title: _buildRichTitle(
+                                  'Follow-up Meeting made',
+                                  'Meeting',
+                                  const Color(0xFFC0FF00),
+                                ),
+                                dateTime: '2025-12-08 11:30 AM',
+                                actor: 'Rajesh Kumar',
+                                comment: 'Customer showed interest',
+                              ),
+                              _buildTimelineItem(
+                                title: _buildRichTitle(
+                                  'Follow-up call made',
+                                  'call',
+                                  const Color(0xFFB49FDA),
+                                ),
+                                dateTime: '2025-12-05 10:30 AM',
+                                actor: 'Rajesh Kumar',
+                                comment: 'Customer showed interest',
+                              ),
+                              _buildTimelineItem(
+                                title: const Text(
+                                  'Email sent',
+                                  style: TextStyle(
+                                    color: Color(0xFF009688),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                dateTime: '2025-12-05 09:00 AM',
+                                actor: 'System',
+                                comment: 'Welcome email with property details',
+                              ),
+                              _buildTimelineItem(
+                                title: const Text(
+                                  'Enquiry created',
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                dateTime: '2025-12-05 08:45 AM',
+                                actor: 'Website',
+                                comment: 'Lead captured from website form',
+                                isLast: true,
+                              ),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             ],
                           ),
                         ),
@@ -732,7 +918,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                       height: 24,
                       fit: BoxFit.contain,
                     ),
+<<<<<<< HEAD
                     () => _launchWhatsApp(widget.lead?['mobile_1']?.toString()),
+=======
+                    () {},
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   ),
                   const SizedBox(height: 12),
                   _buildQuickActionItem(
@@ -741,7 +931,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                       color: Colors.white,
                       size: 24,
                     ),
+<<<<<<< HEAD
                     () => _launchEmail(widget.lead?['email']?.toString()),
+=======
+                    () {},
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   ),
                   const SizedBox(height: 12),
                   _buildQuickActionItem(
@@ -750,7 +944,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                       color: Colors.white,
                       size: 24,
                     ),
+<<<<<<< HEAD
                     () => _launchCall(widget.lead?['mobile_1']?.toString()),
+=======
+                    () {},
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   ),
                   const SizedBox(height: 12),
                   _buildQuickActionItem(
@@ -759,7 +957,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
                       color: Colors.white,
                       size: 24,
                     ),
+<<<<<<< HEAD
                     () => _launchSMS(widget.lead?['mobile_1']?.toString()),
+=======
+                    () {},
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   ),
                   const SizedBox(height: 12),
                 ],
@@ -772,6 +974,7 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
     );
   }
 
+<<<<<<< HEAD
   Future<void> _launchWhatsApp(String? phone) async {
     if (phone == null || phone.isEmpty || phone == 'N/A') {
       _showErrorSnackBar('WhatsApp number not exists');
@@ -1076,6 +1279,8 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
     }
   }
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   Widget _buildProfileInfoLine(String label, String value) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 4),
@@ -1126,7 +1331,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
             borderRadius: BorderRadius.circular(8),
             gradient: isSelected
                 ? const LinearGradient(
+<<<<<<< HEAD
                     colors: [Color(0xFF1B7BBC), Color(0xFF26A69A)],
+=======
+                    colors: [Color(0xFFE4A9CF), Color(0xFFB49FDA)],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
                   )
@@ -1142,7 +1351,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
             label,
             style: TextStyle(
               color: isSelected
+<<<<<<< HEAD
                   ? Theme.of(context).textTheme.bodyLarge?.color
+=======
+                  ? Theme.of(context).primaryColor
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   : Theme.of(context).primaryColor.withOpacity(0.6),
               fontWeight: isSelected ? FontWeight.w500 : FontWeight.w400,
               fontSize: 14,
@@ -1324,6 +1537,30 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
     );
   }
 
+<<<<<<< HEAD
+=======
+  Widget _buildRichTitle(String title, String highlight, Color highlightColor) {
+    final parts = title.split(highlight);
+    return RichText(
+      text: TextSpan(
+        style: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+          color: Theme.of(context).textTheme.bodyLarge?.color,
+        ),
+        children: [
+          if (parts[0].isNotEmpty) TextSpan(text: parts[0]),
+          TextSpan(
+            text: highlight,
+            style: TextStyle(color: highlightColor),
+          ),
+          if (parts.length > 1 && parts[1].isNotEmpty) TextSpan(text: parts[1]),
+        ],
+      ),
+    );
+  }
+
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   Widget _buildDetailField(String label, String value, {bool isLast = false}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1366,7 +1603,11 @@ class _EnquiryDetailsScreenState extends State<EnquiryDetailsScreen> {
           gradient: _isQuickMenuExpanded
               ? null
               : const LinearGradient(
+<<<<<<< HEAD
                   colors: [Color(0xFF1B7BBC), Color(0xFF26A69A)],
+=======
+                  colors: [Color(0xFF37A1BB), Color(0xFFDD6BF1)],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),

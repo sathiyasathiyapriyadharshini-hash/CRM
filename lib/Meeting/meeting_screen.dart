@@ -76,7 +76,11 @@ class _MeetingVisitScreenState extends State<MeetingVisitScreen> {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     const Color primaryPurple = Color(0xFF26A69A);
+=======
+    const Color primaryPurple = Color(0xFF6B4195);
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     final Size size = MediaQuery.of(context).size;
     final double screenWidth = size.width;
     final counts = _currentCounts;
@@ -114,7 +118,11 @@ class _MeetingVisitScreenState extends State<MeetingVisitScreen> {
                 decoration: BoxDecoration(
                   color: Theme.of(context).brightness == Brightness.dark
                       ? const Color(0xFF2C2440)
+<<<<<<< HEAD
                       : const Color(0xFFE0FFFC),
+=======
+                      : const Color(0xFFEBE0FF),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: TextField(
@@ -176,7 +184,11 @@ class _MeetingVisitScreenState extends State<MeetingVisitScreen> {
                           style: TextStyle(
                             color: isSelected
                                 ? Colors.white
+<<<<<<< HEAD
                                 : const Color(0xFF26A69A),
+=======
+                                : const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             fontWeight: FontWeight.w500,
                             fontSize: screenWidth * 0.035,
                           ),
@@ -203,7 +215,11 @@ class _MeetingVisitScreenState extends State<MeetingVisitScreen> {
                     foregroundColor: Theme.of(
                       context,
                     ).textTheme.bodyLarge?.color,
+<<<<<<< HEAD
                     side: const BorderSide(color: Color(0xFF26A69A)),
+=======
+                    side: const BorderSide(color: Color(0xFF6B4195)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -315,10 +331,19 @@ class _MeetingVisitScreenState extends State<MeetingVisitScreen> {
             MaterialPageRoute(builder: (context) => const AddMeetingScreen()),
           );
         },
+<<<<<<< HEAD
         backgroundColor: const Color(0xFF26A69A),
         shape: const CircleBorder(),
         elevation: 2,
         child: const Icon(Icons.add, color: Colors.white, size: 30),
+=======
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? const Color(0xFF3B2455)
+            : const Color(0xFFEBE0FF),
+        shape: const CircleBorder(),
+        elevation: 2,
+        child: const Icon(Icons.add, color: primaryPurple, size: 30),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
       ),
     );
   }
@@ -494,7 +519,11 @@ class _MeetingVisitScreenState extends State<MeetingVisitScreen> {
       leading: Icon(
         icon,
         color: isSelected
+<<<<<<< HEAD
             ? const Color(0xFF26A69A)
+=======
+            ? const Color(0xFF6B4195)
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             : Theme.of(context).textTheme.bodyLarge?.color,
       ),
       title: Text(
@@ -503,12 +532,20 @@ class _MeetingVisitScreenState extends State<MeetingVisitScreen> {
           fontSize: 16,
           fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
           color: isSelected
+<<<<<<< HEAD
               ? const Color(0xFF26A69A)
+=======
+              ? const Color(0xFF6B4195)
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               : Theme.of(context).textTheme.bodyLarge?.color,
         ),
       ),
       trailing: isSelected
+<<<<<<< HEAD
           ? const Icon(Icons.check, color: Color(0xFF26A69A))
+=======
+          ? const Icon(Icons.check, color: Color(0xFF6B4195))
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           : null,
       onTap: () {
         setState(() {

@@ -2,6 +2,7 @@ import 'package:crm/Leads/leads_screen.dart';
 import 'package:crm/Home/notification_screen.dart';
 import 'package:crm/Deals/deals_screen.dart';
 import 'package:crm/Follows/follow_up_screen.dart';
+<<<<<<< HEAD
 import 'package:crm/Deals/deal_won.dart';
 import 'package:crm/Deals/deal_lost.dart';
 import 'package:crm/Meeting/add_meeting_screen.dart';
@@ -13,6 +14,13 @@ import '../Drawer/drawer_screen.dart';
 import '../Leads/enquiry_screen.dart';
 import '../Leads/add_lead_screen.dart';
 import '../utils/preference_service.dart';
+=======
+import 'package:crm/Meeting/add_meeting_screen.dart';
+import 'package:crm/Meeting/meeting_screen.dart';
+import 'package:flutter/material.dart';
+import '../BottomBar/custom_bottom_nav.dart';
+import '../Drawer/drawer_screen.dart';
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
 class DashboardScreen extends StatefulWidget {
   final int initialIndex;
@@ -28,6 +36,7 @@ class DashboardScreen extends StatefulWidget {
   State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
+<<<<<<< HEAD
 class _DashboardScreenState extends State<DashboardScreen>
     with SingleTickerProviderStateMixin {
   int _currentIndex = 0;
@@ -45,11 +54,16 @@ class _DashboardScreenState extends State<DashboardScreen>
       }
     });
   }
+=======
+class _DashboardScreenState extends State<DashboardScreen> {
+  int _currentIndex = 0;
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
   @override
   void initState() {
     super.initState();
     _currentIndex = widget.initialIndex;
+<<<<<<< HEAD
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 300),
@@ -64,6 +78,8 @@ class _DashboardScreenState extends State<DashboardScreen>
   void dispose() {
     _animationController.dispose();
     super.dispose();
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   }
 
   // Method to get current screen
@@ -95,13 +111,18 @@ class _DashboardScreenState extends State<DashboardScreen>
       drawer: const DrawerScreen(),
       appBar: _currentIndex == 0
           ? AppBar(
+<<<<<<< HEAD
               backgroundColor: const Color(0xFF26A69A),
+=======
+              backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               elevation: 0,
               toolbarHeight: 0,
             )
           : null,
       body: _getCurrentScreen(),
       floatingActionButton: _currentIndex == 0
+<<<<<<< HEAD
           ? AnimatedBuilder(
               animation: _expandAnimation,
               builder: (context, child) {
@@ -215,6 +236,26 @@ class _DashboardScreenState extends State<DashboardScreen>
                   ],
                 );
               },
+=======
+          ? SizedBox(
+              height: screenWidth * 0.16,
+              width: screenWidth * 0.16,
+              child: FloatingActionButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const AddMeetingScreen()),
+                  );
+                },
+                backgroundColor: const Color(0xFF6B4195),
+                shape: const CircleBorder(),
+                child: Icon(
+                  Icons.group_add,
+                  color: Colors.white,
+                  size: screenWidth * 0.08,
+                ),
+              ),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             )
           : null,
       bottomNavigationBar: CustomBottomNav(
@@ -227,6 +268,7 @@ class _DashboardScreenState extends State<DashboardScreen>
       ),
     );
   }
+<<<<<<< HEAD
 
   Widget _buildFabAction({
     required IconData icon,
@@ -303,6 +345,11 @@ class _DashboardContentState extends State<_DashboardContent> {
     }
   }
 
+=======
+}
+
+class _DashboardContent extends StatelessWidget {
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -317,7 +364,11 @@ class _DashboardContentState extends State<_DashboardContent> {
           Container(
             padding: EdgeInsets.only(bottom: screenHeight * 0.03),
             decoration: const BoxDecoration(
+<<<<<<< HEAD
               color: Color(0xFF26A69A),
+=======
+              color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
@@ -338,7 +389,11 @@ class _DashboardContentState extends State<_DashboardContent> {
                         onPressed: () => Scaffold.of(context).openDrawer(),
                       ),
                       Text(
+<<<<<<< HEAD
                         _userName,
+=======
+                        'Tamilarasi',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: screenWidth * 0.05,
@@ -363,6 +418,50 @@ class _DashboardContentState extends State<_DashboardContent> {
                     ],
                   ),
                 ),
+<<<<<<< HEAD
+=======
+                // Search Bar
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: screenWidth * 0.06,
+                    vertical: screenHeight * 0.01,
+                  ),
+                  child: Container(
+                    height: screenHeight * 0.06,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withAlpha(12),
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: TextField(
+                      style: TextStyle(fontSize: screenWidth * 0.038),
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                          fontSize: screenWidth * 0.038,
+                        ),
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: const Color(0xFF6B4195),
+                          size: screenWidth * 0.06,
+                        ),
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: screenHeight * 0.015,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: screenHeight * 0.02),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 // Hero Banner
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
@@ -372,6 +471,7 @@ class _DashboardContentState extends State<_DashboardContent> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     padding: const EdgeInsets.all(20),
+<<<<<<< HEAD
                     child: Column(
                       children: [
                         Row(
@@ -428,6 +528,34 @@ class _DashboardContentState extends State<_DashboardContent> {
                           children: [
                             Expanded(
                               child: ElevatedButton(
+=======
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 5,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'MANAGE YOUR LEADS\nEFFICIENTLY!',
+                                style: TextStyle(
+                                  color: const Color(0xFF897418),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: screenWidth * 0.04,
+                                  height: 1.2,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                'Capture, Track & Nurture\nProspects Seamlessly',
+                                style: TextStyle(
+                                  color: const Color(0xFF6B4195).withAlpha(153),
+                                  fontSize: screenWidth * 0.03,
+                                ),
+                              ),
+                              const SizedBox(height: 16),
+                              ElevatedButton(
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                 onPressed: () {
                                   Navigator.push(
                                     context,
@@ -442,12 +570,20 @@ class _DashboardContentState extends State<_DashboardContent> {
                                     borderRadius: BorderRadius.circular(25),
                                   ),
                                   padding: EdgeInsets.symmetric(
+<<<<<<< HEAD
                                     horizontal: screenWidth * 0.02,
+=======
+                                    horizontal: screenWidth * 0.05,
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                     vertical: screenHeight * 0.01,
                                   ),
                                 ),
                                 child: Row(
+<<<<<<< HEAD
                                   mainAxisAlignment: MainAxisAlignment.center,
+=======
+                                  mainAxisSize: MainAxisSize.min,
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                   children: [
                                     Text(
                                       'Get Lead',
@@ -466,6 +602,7 @@ class _DashboardContentState extends State<_DashboardContent> {
                                   ],
                                 ),
                               ),
+<<<<<<< HEAD
                             ),
                             const SizedBox(width: 8),
                             Expanded(
@@ -510,6 +647,23 @@ class _DashboardContentState extends State<_DashboardContent> {
                               ),
                             ),
                           ],
+=======
+                            ],
+                          ),
+                        ),
+                        // Illustration
+                        Expanded(
+                          flex: 4,
+                          child: Image.asset(
+                            'assets/images/group.png',
+                            fit: BoxFit.contain,
+                            errorBuilder: (context, error, stackTrace) => Icon(
+                              Icons.group,
+                              size: screenWidth * 0.15,
+                              color: const Color(0xFF6B4195).withAlpha(76),
+                            ),
+                          ),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         ),
                       ],
                     ),
@@ -534,7 +688,11 @@ class _DashboardContentState extends State<_DashboardContent> {
                       style: TextStyle(
                         fontSize: screenWidth * 0.055,
                         fontWeight: FontWeight.bold,
+<<<<<<< HEAD
                         color: const Color(0xFF26A69A),
+=======
+                        color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                       ),
                     ),
                     const Spacer(),
@@ -546,7 +704,11 @@ class _DashboardContentState extends State<_DashboardContent> {
                           vertical: 9,
                         ),
                         decoration: BoxDecoration(
+<<<<<<< HEAD
                           color: const Color(0xFF26A69A),
+=======
+                          color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: const Row(
@@ -591,7 +753,11 @@ class _DashboardContentState extends State<_DashboardContent> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
             child: Text(
+<<<<<<< HEAD
               'Follow-up',
+=======
+              'Today Follow-up',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               style: TextStyle(
                 fontSize: screenWidth * 0.045,
                 fontWeight: FontWeight.bold,
@@ -617,6 +783,7 @@ class _DashboardContentState extends State<_DashboardContent> {
                   iconBgColor: const Color(0xFFF2B3B3),
                   iconPath: 'assets/icons/today.png',
                   screenWidth: screenWidth,
+<<<<<<< HEAD
                   onTap: () {
                     Navigator.push(
                       context,
@@ -625,6 +792,8 @@ class _DashboardContentState extends State<_DashboardContent> {
                       ),
                     );
                   },
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 ),
                 const SizedBox(width: 12),
                 _buildFollowUpCard(
@@ -644,6 +813,7 @@ class _DashboardContentState extends State<_DashboardContent> {
                   iconBgColor: const Color(0xFFFFEEC3),
                   iconPath: 'assets/icons/miss.png',
                   screenWidth: screenWidth,
+<<<<<<< HEAD
                   onTap: () {
                     Navigator.push(
                       context,
@@ -656,6 +826,12 @@ class _DashboardContentState extends State<_DashboardContent> {
                 const SizedBox(width: 12),
                 _buildFollowUpCard(
                   title: 'UpComing',
+=======
+                ),
+                const SizedBox(width: 12),
+                _buildFollowUpCard(
+                  title: 'New',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   count: '30',
                   subtitle: 'Follow up',
                   countColor: Colors.blue,
@@ -671,6 +847,7 @@ class _DashboardContentState extends State<_DashboardContent> {
                   iconBgColor: const Color(0xFF86C0EC),
                   iconPath: 'assets/icons/new.png',
                   screenWidth: screenWidth,
+<<<<<<< HEAD
                   onTap: () {
                     Navigator.push(
                       context,
@@ -679,6 +856,8 @@ class _DashboardContentState extends State<_DashboardContent> {
                       ),
                     );
                   },
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 ),
               ],
             ),
@@ -690,7 +869,11 @@ class _DashboardContentState extends State<_DashboardContent> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
             child: Text(
+<<<<<<< HEAD
               'Deals',
+=======
+              'Deals count',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               style: TextStyle(
                 fontSize: screenWidth * 0.045,
                 fontWeight: FontWeight.bold,
@@ -709,6 +892,7 @@ class _DashboardContentState extends State<_DashboardContent> {
                   // Large WON Card
                   Expanded(
                     flex: 4,
+<<<<<<< HEAD
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -775,17 +959,80 @@ class _DashboardContentState extends State<_DashboardContent> {
                             ),
                           ],
                         ),
+=======
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [Color(0x99FFFFFF), Color(0x6672C8C3)],
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/icons/won1.png',
+                            width: screenWidth * 0.15,
+                            height: screenWidth * 0.15,
+                            errorBuilder: (context, error, stackTrace) =>
+                                const Icon(
+                                  Icons.surfing,
+                                  size: 50,
+                                  color: Color(0xFF2E8B57),
+                                ),
+                          ),
+                          const SizedBox(height: 4),
+                          Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color(0xFF79D6CC),
+                            ),
+                            child: Text(
+                              '10',
+                              style: TextStyle(
+                                fontSize: screenWidth * 0.05,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Won',
+                            style: TextStyle(
+                              fontSize: screenWidth * 0.045,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black87,
+                            ),
+                          ),
+                          Text(
+                            'Deal',
+                            style: TextStyle(
+                              fontSize: screenWidth * 0.035,
+                              color: Colors.black54,
+                            ),
+                          ),
+                        ],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                       ),
                     ),
                   ),
                   const SizedBox(width: 16),
+<<<<<<< HEAD
                   // Right Column Stackn
+=======
+                  // Right Column Stack
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   Expanded(
                     flex: 5,
                     child: Column(
                       children: [
                         // Pending Card
                         Expanded(
+<<<<<<< HEAD
                           child: GestureDetector(
                             onTap: () {
                               Navigator.push(
@@ -861,12 +1108,78 @@ class _DashboardContentState extends State<_DashboardContent> {
                                   ),
                                 ],
                               ),
+=======
+                          child: Container(
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  const Color(
+                                    0xFFFFFFFF,
+                                  ).withOpacity(0.6), // White 60%
+                                  const Color(0xA5FFEC9B), // Yellow 40%
+                                ],
+                              ),
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  'assets/icons/pending.png',
+                                  width: screenWidth * 0.1,
+                                  height: screenWidth * 0.1,
+                                  errorBuilder: (context, error, stackTrace) =>
+                                      const Icon(
+                                        Icons.edit_note,
+                                        size: 40,
+                                        color: Colors.orange,
+                                      ),
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Pending',
+                                        style: TextStyle(
+                                          fontSize: screenWidth * 0.04,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black87,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Container(
+                                        padding: const EdgeInsets.all(8),
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xFFFEEFB0),
+                                        ),
+                                        child: Text(
+                                          '10',
+                                          style: TextStyle(
+                                            fontSize: screenWidth * 0.04,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black87,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             ),
                           ),
                         ),
                         const SizedBox(height: 16),
                         // Lost Card
                         Expanded(
+<<<<<<< HEAD
                           child: GestureDetector(
                             onTap: () {
                               Navigator.push(
@@ -939,6 +1252,65 @@ class _DashboardContentState extends State<_DashboardContent> {
                                   ),
                                 ],
                               ),
+=======
+                          child: Container(
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [Color(0x99FFFFFF), Color(0x66F66955)],
+                              ),
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  'assets/icons/lost.png',
+                                  width: screenWidth * 0.1,
+                                  height: screenWidth * 0.1,
+                                  errorBuilder: (context, error, stackTrace) =>
+                                      const Icon(
+                                        Icons.handshake_outlined,
+                                        size: 40,
+                                        color: Colors.redAccent,
+                                      ),
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Lost',
+                                        style: TextStyle(
+                                          fontSize: screenWidth * 0.04,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black87,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Container(
+                                        padding: const EdgeInsets.all(8),
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xFFF3BF84),
+                                        ),
+                                        child: Text(
+                                          '10',
+                                          style: TextStyle(
+                                            fontSize: screenWidth * 0.04,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black87,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             ),
                           ),
                         ),
@@ -1030,6 +1402,7 @@ class _DashboardContentState extends State<_DashboardContent> {
     required Color iconBgColor,
     required String iconPath,
     required double screenWidth,
+<<<<<<< HEAD
     VoidCallback? onTap,
   }) {
     return Expanded(
@@ -1109,6 +1482,74 @@ class _DashboardContentState extends State<_DashboardContent> {
               ),
             ],
           ),
+=======
+  }) {
+    return Expanded(
+      child: Container(
+        height: screenWidth * 0.28,
+        decoration: BoxDecoration(
+          gradient: gradient,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withAlpha(12),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        padding: EdgeInsets.all(screenWidth * 0.03),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: screenWidth * 0.035,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black87,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(screenWidth * 0.015),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: iconBgColor,
+                  ),
+                  child: Image.asset(
+                    iconPath,
+                    width: screenWidth * 0.045,
+                    height: screenWidth * 0.045,
+                    errorBuilder: (context, error, stackTrace) => SizedBox(
+                      width: screenWidth * 0.045,
+                      height: screenWidth * 0.045,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Text(
+              count,
+              style: TextStyle(
+                fontSize: screenWidth * 0.06,
+                fontWeight: FontWeight.bold,
+                color: countColor,
+              ),
+            ),
+            Text(
+              subtitle,
+              style: TextStyle(
+                fontSize: screenWidth * 0.03,
+                color: Colors.black.withAlpha(153),
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         ),
       ),
     );
@@ -1164,6 +1605,7 @@ class _DashboardContentState extends State<_DashboardContent> {
   }
 
   Future<void> _selectDate(BuildContext context) async {
+<<<<<<< HEAD
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -1214,5 +1656,24 @@ class _DashboardContentState extends State<_DashboardContent> {
         ),
       ),
     );
+=======
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2101),
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: const ColorScheme.light(primary: Color(0xFF6B4195)),
+          ),
+          child: child!,
+        );
+      },
+    );
+    if (picked != null) {
+      // Logic to filter by date could go here
+    }
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   }
 }

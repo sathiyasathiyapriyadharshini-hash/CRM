@@ -6,7 +6,10 @@ import 'package:http/http.dart' as http;
 import 'package:crm/services/social_auth_service.dart';
 import 'package:crm/Home/dashboard_screen.dart';
 import 'dart:convert';
+<<<<<<< HEAD
 import 'package:crm/utils/preference_service.dart';
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -61,6 +64,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       return;
     }
 
+<<<<<<< HEAD
     final emailLower = email.toLowerCase();
 
     if (!(emailLower.endsWith('@gmail.com') ||
@@ -68,6 +72,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
       _showError('Email must be @gmail.com or @sgsapp.in');
       return;
     }
+=======
+    if (!email.toLowerCase().endsWith('@gmail.com')) {
+      _showError('Email must be from @gmail.com');
+      return;
+    }
+
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     if (phone.length != 10) {
       _showError('Mobile number must be 10 digits');
       return;
@@ -104,8 +115,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
       debugPrint("DEVICE ID: $deviceId");
       debugPrint("LAT: $lt  LNG: $ln");
 
+<<<<<<< HEAD
       String currentCid = await PreferenceService.getCid();
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
       final response = await http.post(
         Uri.parse(apiUrl),
         body: {
@@ -113,7 +127,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
           'number': phone,
           'wp_number': whatsapp,
           'email': email,
+<<<<<<< HEAD
           'cid': currentCid,
+=======
+          'cid': '21472147',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           'type': '3000',
           'device_id': deviceId,
           'ln': ln,
@@ -242,10 +260,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           width: screenWidth * 0.7,
                         ),
                         const SizedBox(height: 7),
+<<<<<<< HEAD
                         // Image.asset(
                         //   'assets/images/TOTAL ERP.png',
                         //   width: screenWidth * 0.45,
                         // ),
+=======
+                        Image.asset(
+                          'assets/images/TOTAL ERP.png',
+                          width: screenWidth * 0.45,
+                        ),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         SizedBox(height: screenHeight * 0.025),
                         Align(
                           alignment: Alignment.center,
@@ -340,12 +365,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   }
                                 },
 
+<<<<<<< HEAD
                                 activeColor: const Color(0xFF26A69A),
+=======
+                                activeColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5),
                                 ),
                                 side: const BorderSide(
+<<<<<<< HEAD
                                   color: Color(0xFF26A69A),
+=======
+                                  color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                   width: 1.5,
                                 ),
                                 visualDensity: const VisualDensity(
@@ -361,7 +394,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               'Same as Mobile Number',
                               style: TextStyle(
                                 fontSize: 13.8,
+<<<<<<< HEAD
                                 color: Color(0xFF26A69A),
+=======
+                                color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -376,9 +413,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 value: _agreedToTerms,
                                 onChanged: (val) =>
                                     setState(() => _agreedToTerms = val!),
+<<<<<<< HEAD
                                 activeColor: const Color(0xFF26A69A),
                                 side: const BorderSide(
                                   color: Color(0xFF26A69A),
+=======
+                                activeColor: const Color(0xFF6B4195),
+                                side: const BorderSide(
+                                  color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                   width: 1.5,
                                 ),
                                 visualDensity: const VisualDensity(
@@ -411,7 +454,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     TextSpan(
                                       text: 'Terms of Service',
                                       style: TextStyle(
+<<<<<<< HEAD
                                         color: Color(0xFF26A69A),
+=======
+                                        color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                         decoration: TextDecoration.underline,
                                         fontWeight: FontWeight.w500,
                                       ),
@@ -425,7 +472,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     TextSpan(
                                       text: 'Privacy Policy',
                                       style: TextStyle(
+<<<<<<< HEAD
                                         color: Color(0xFF26A69A),
+=======
+                                        color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                         decoration: TextDecoration.underline,
                                         fontWeight: FontWeight.w500,
                                       ),
@@ -443,7 +494,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           child: ElevatedButton(
                             onPressed: _handleSignUp,
                             style: ElevatedButton.styleFrom(
+<<<<<<< HEAD
                               backgroundColor: const Color(0xFF26A69A),
+=======
+                              backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -468,11 +523,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           children: [
                             Text(
                               'or ',
+<<<<<<< HEAD
                               style: TextStyle(color: const Color(0xFF26A69A)),
                             ),
                             const Text(
                               'signup with',
                               style: TextStyle(color: Color(0xFF26A69A)),
+=======
+                              style: TextStyle(color: const Color(0xFF6B4195)),
+                            ),
+                            const Text(
+                              'signup with',
+                              style: TextStyle(color: Color(0xFF6B4195)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             ),
                           ],
                         ),
@@ -532,7 +595,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               child: const Text(
                                 "Signin",
                                 style: TextStyle(
+<<<<<<< HEAD
                                   color: Color(0xFF26A69A),
+=======
+                                  color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                   fontWeight: FontWeight.w500,
                                   decoration: TextDecoration.underline,
                                 ),
@@ -583,6 +650,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
+<<<<<<< HEAD
           borderSide: const BorderSide(color: Color(0xFF26A69A)),
         ),
         enabledBorder: OutlineInputBorder(
@@ -592,6 +660,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(color: Color(0xFF26A69A), width: 2),
+=======
+          borderSide: const BorderSide(color: Color(0xFF6B4195)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: Color(0xFF6B4195)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: Color(0xFF6B4195), width: 2),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         ),
       ),
     );

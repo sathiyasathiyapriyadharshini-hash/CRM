@@ -17,7 +17,11 @@ class CustomBottomNav extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
+<<<<<<< HEAD
         color: const Color(0xFF26A69A),
+=======
+        color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),

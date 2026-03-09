@@ -29,7 +29,11 @@ class _ReportScreenState extends State<ReportScreen> {
       'status': 'Qualified',
       'count': 'Leads 45 Found',
       'viewCount': '3 times viewed',
+<<<<<<< HEAD
       'statusColor': const Color(0xFF26A69A),
+=======
+      'statusColor': const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     },
     {
       'title': 'Follow up Report',
@@ -50,7 +54,11 @@ class _ReportScreenState extends State<ReportScreen> {
       'status': 'Qualified',
       'count': 'Leads 45 Found',
       'viewCount': '3 times viewed',
+<<<<<<< HEAD
       'statusColor': const Color(0xFF26A69A),
+=======
+      'statusColor': const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     },
     {
       'title': 'Follow up Report',
@@ -106,7 +114,11 @@ class _ReportScreenState extends State<ReportScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FB),
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: const Color(0xFF26A69A),
+=======
+        backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         elevation: 0,
         leading: IconButton(
           icon: Icon(
@@ -150,7 +162,11 @@ class _ReportScreenState extends State<ReportScreen> {
                     style: TextStyle(
                       fontSize: screenWidth * 0.045,
                       fontWeight: FontWeight.bold,
+<<<<<<< HEAD
                       color: const Color(0xFF26A69A),
+=======
+                      color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                     ),
                   ),
                   SizedBox(height: screenHeight * 0.02),
@@ -168,7 +184,11 @@ class _ReportScreenState extends State<ReportScreen> {
                       ),
                       decoration: BoxDecoration(
                         border: Border.all(
+<<<<<<< HEAD
                           color: const Color(0xFF26A69A).withAlpha(127),
+=======
+                          color: const Color(0xFF6B4195).withAlpha(127),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         ),
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -188,7 +208,11 @@ class _ReportScreenState extends State<ReportScreen> {
                             _isReportDropdownOpen
                                 ? Icons.arrow_drop_up
                                 : Icons.arrow_drop_down,
+<<<<<<< HEAD
                             color: const Color(0xFF26A69A),
+=======
+                            color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             size: screenWidth * 0.06,
                           ),
                         ],
@@ -200,7 +224,11 @@ class _ReportScreenState extends State<ReportScreen> {
                       margin: const EdgeInsets.only(top: 4),
                       decoration: BoxDecoration(
                         border: Border.all(
+<<<<<<< HEAD
                           color: const Color(0xFF26A69A).withAlpha(127),
+=======
+                          color: const Color(0xFF6B4195).withAlpha(127),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         ),
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.white,
@@ -239,7 +267,11 @@ class _ReportScreenState extends State<ReportScreen> {
                           return Theme(
                             data: Theme.of(context).copyWith(
                               colorScheme: const ColorScheme.light(
+<<<<<<< HEAD
                                 primary: Color(0xFF26A69A),
+=======
+                                primary: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                               ),
                             ),
                             child: child!,
@@ -259,7 +291,11 @@ class _ReportScreenState extends State<ReportScreen> {
                       ),
                       decoration: BoxDecoration(
                         border: Border.all(
+<<<<<<< HEAD
                           color: const Color(0xFF26A69A).withAlpha(127),
+=======
+                          color: const Color(0xFF6B4195).withAlpha(127),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         ),
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -279,7 +315,11 @@ class _ReportScreenState extends State<ReportScreen> {
                           ),
                           Icon(
                             Icons.calendar_month_outlined,
+<<<<<<< HEAD
                             color: const Color(0xFF26A69A),
+=======
+                            color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             size: screenWidth * 0.06,
                           ),
                         ],
@@ -294,7 +334,11 @@ class _ReportScreenState extends State<ReportScreen> {
                       child: ElevatedButton(
                         onPressed: _filterReports,
                         style: ElevatedButton.styleFrom(
+<<<<<<< HEAD
                           backgroundColor: const Color(0xFF26A69A),
+=======
+                          backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
@@ -325,7 +369,11 @@ class _ReportScreenState extends State<ReportScreen> {
                       style: TextStyle(
                         fontSize: screenWidth * 0.04,
                         fontWeight: FontWeight.bold,
+<<<<<<< HEAD
                         color: const Color(0xFF26A69A),
+=======
+                        color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                       ),
                     ),
                   ),
@@ -414,14 +462,22 @@ class _ReportScreenState extends State<ReportScreen> {
             Icons.calendar_month_outlined,
             date,
             screenWidth,
+<<<<<<< HEAD
             color: const Color(0xFF26A69A),
+=======
+            color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           ),
           SizedBox(height: screenHeight * 0.008),
           Row(
             children: [
               Icon(
                 Icons.filter_alt_outlined,
+<<<<<<< HEAD
                 color: const Color(0xFF26A69A),
+=======
+                color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 size: screenWidth * 0.045,
               ),
               SizedBox(width: screenWidth * 0.02),
@@ -440,7 +496,11 @@ class _ReportScreenState extends State<ReportScreen> {
                         style: TextStyle(
                           color: status.toLowerCase() == 'pending'
                               ? Color(0xFF920000)
+<<<<<<< HEAD
                               : const Color(0xFF26A69A),
+=======
+                              : const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -456,7 +516,11 @@ class _ReportScreenState extends State<ReportScreen> {
               Icons.track_changes,
               'Leads $count Found',
               screenWidth,
+<<<<<<< HEAD
               color: const Color(0xFF26A69A),
+=======
+              color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             ),
           ],
           if (nextFollowUp != null) ...[
@@ -465,7 +529,11 @@ class _ReportScreenState extends State<ReportScreen> {
               Icons.watch_later_outlined,
               'Next follow up : $nextFollowUp',
               screenWidth,
+<<<<<<< HEAD
               color: const Color(0xFF26A69A),
+=======
+              color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             ),
           ],
           if (assignedTo != null) ...[
@@ -474,7 +542,11 @@ class _ReportScreenState extends State<ReportScreen> {
               Icons.person_outline,
               'Assigned to : $assignedTo',
               screenWidth,
+<<<<<<< HEAD
               color: const Color(0xFF26A69A),
+=======
+              color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             ),
           ],
           if (type != null) ...[
@@ -483,7 +555,11 @@ class _ReportScreenState extends State<ReportScreen> {
               Icons.mail_outline,
               'Type : $type',
               screenWidth,
+<<<<<<< HEAD
               color: const Color(0xFF26A69A),
+=======
+              color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             ),
           ],
           SizedBox(height: screenHeight * 0.008),
@@ -504,7 +580,11 @@ class _ReportScreenState extends State<ReportScreen> {
                     Icons.visibility_outlined,
                     '$viewCount viewed',
                     screenWidth,
+<<<<<<< HEAD
                     color: const Color(0xFF26A69A),
+=======
+                    color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   ),
                 ),
               ),
@@ -526,7 +606,11 @@ class _ReportScreenState extends State<ReportScreen> {
                         child: Text(
                           'View Full Detail',
                           style: TextStyle(
+<<<<<<< HEAD
                             color: const Color(0xFF26A69A),
+=======
+                            color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             fontSize: screenWidth * 0.036,
                             fontWeight: FontWeight.w500,
                             decoration: TextDecoration.underline,
@@ -537,7 +621,11 @@ class _ReportScreenState extends State<ReportScreen> {
                       const SizedBox(width: 4),
                       Icon(
                         Icons.keyboard_double_arrow_right,
+<<<<<<< HEAD
                         color: const Color(0xFF26A69A),
+=======
+                        color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         size: screenWidth * 0.045,
                       ),
                     ],
@@ -560,7 +648,11 @@ class _ReportScreenState extends State<ReportScreen> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
+<<<<<<< HEAD
         Icon(icon, size: screenWidth * 0.045, color: const Color(0xFF26A69A)),
+=======
+        Icon(icon, size: screenWidth * 0.045, color: const Color(0xFF6B4195)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         SizedBox(width: screenWidth * 0.02),
         Flexible(
           child: Text(

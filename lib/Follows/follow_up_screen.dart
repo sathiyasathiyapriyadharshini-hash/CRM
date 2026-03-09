@@ -91,7 +91,11 @@ class _FollowUpScreenState extends State<FollowUpScreen> {
     return Scaffold(
       // backgroundColor: Colors.white, // Removed hardcoded color
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: const Color(0xFF26A69A),
+=======
+        backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
@@ -497,7 +501,11 @@ class _FollowUpScreenState extends State<FollowUpScreen> {
                       gradient: _isQuickMenuExpanded
                           ? null
                           : const LinearGradient(
+<<<<<<< HEAD
                               colors: [Color(0xFF1B7BBC), Color(0xFF26A69A)],
+=======
+                              colors: [Color(0xFF37A1BB), Color(0xFFDD6BF1)],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                             ),
@@ -534,7 +542,11 @@ class _FollowUpScreenState extends State<FollowUpScreen> {
         height: screenWidth * 0.12,
         decoration: BoxDecoration(
           color: isSelected
+<<<<<<< HEAD
               ? const Color(0xFF26A69A)
+=======
+              ? const Color(0xFF6B4195)
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               : (Theme.of(context).brightness == Brightness.dark
                     ? Colors.grey.shade900
                     : Colors.white),
@@ -548,7 +560,11 @@ class _FollowUpScreenState extends State<FollowUpScreen> {
             assetPath,
             width: screenWidth * 0.06,
             height: screenWidth * 0.06,
+<<<<<<< HEAD
             color: isSelected ? Colors.white : const Color(0xFF26A69A),
+=======
+            color: isSelected ? Colors.white : const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           ),
         ),
       ),
@@ -631,9 +647,13 @@ class _FollowUpScreenState extends State<FollowUpScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
+<<<<<<< HEAD
                     builder: (context) => EnquiryDetailsScreen(
                       lead: {'cus_name': name, 'enquiry_date': leadNo},
                     ),
+=======
+                    builder: (context) => const EnquiryDetailsScreen(),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   ),
                 );
               },
@@ -840,9 +860,15 @@ class _FollowUpScreenState extends State<FollowUpScreen> {
         return Theme(
           data: Theme.of(context).copyWith(
             colorScheme: ColorScheme.fromSeed(
+<<<<<<< HEAD
               seedColor: const Color(0xFF26A69A),
               brightness: Theme.of(context).brightness,
               primary: const Color(0xFF26A69A),
+=======
+              seedColor: const Color(0xFF6B4195),
+              brightness: Theme.of(context).brightness,
+              primary: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               onPrimary: Colors.white,
               surface: isDark ? const Color(0xFF1E1E1E) : Colors.white,
               onSurface: isDark ? Colors.white : Colors.black,
@@ -985,7 +1011,11 @@ class _FollowUpScreenState extends State<FollowUpScreen> {
         width: 45,
         height: 45,
         decoration: const BoxDecoration(
+<<<<<<< HEAD
           color: Color(0xFF26A69A),
+=======
+          color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           shape: BoxShape.circle,
         ),
         child: Center(child: iconWidget),

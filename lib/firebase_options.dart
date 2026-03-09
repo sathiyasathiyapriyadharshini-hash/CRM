@@ -7,7 +7,11 @@ import 'package:flutter/foundation.dart'
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
 /// Example:
+<<<<<<< HEAD
 /// ```dart
+=======
+/// ```dart 
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 /// import 'firebase_options.dart';
 /// // ...
 /// await Firebase.initializeApp(

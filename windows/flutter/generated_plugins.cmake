@@ -7,13 +7,19 @@ list(APPEND FLUTTER_PLUGIN_LIST
   firebase_auth
   firebase_core
   geolocator_windows
+<<<<<<< HEAD
   local_auth_windows
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   share_plus
   url_launcher_windows
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
+<<<<<<< HEAD
   flutter_local_notifications_windows
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 )
 
 set(PLUGIN_BUNDLED_LIBRARIES)

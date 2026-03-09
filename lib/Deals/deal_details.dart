@@ -6,7 +6,11 @@ class DealDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     const Color primaryPurple = Color(0xFF26A69A);
+=======
+    const Color primaryPurple = Color(0xFF6B4195);
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     const Color profileBlue = Color(0xFFAEC1E8);
 
     return Scaffold(
@@ -275,11 +279,19 @@ class DealDetailsScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Theme.of(context).cardColor,
                   shape: BoxShape.circle,
+<<<<<<< HEAD
                   border: Border.all(color: const Color(0xFF26A69A), width: 2),
                 ),
                 child: const Icon(
                   Icons.access_time_filled,
                   color: Color(0xFF26A69A),
+=======
+                  border: Border.all(color: const Color(0xFF6B4195), width: 2),
+                ),
+                child: const Icon(
+                  Icons.access_time_filled,
+                  color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   size: 24,
                 ),
               ),
@@ -287,7 +299,11 @@ class DealDetailsScreen extends StatelessWidget {
                 Expanded(
                   child: Container(
                     width: 2,
+<<<<<<< HEAD
                     color: const Color(0xFF26A69A).withOpacity(0.5),
+=======
+                    color: const Color(0xFF6B4195).withOpacity(0.5),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   ),
                 ),
             ],

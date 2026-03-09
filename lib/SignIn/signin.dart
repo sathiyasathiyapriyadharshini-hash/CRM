@@ -7,8 +7,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter/gestures.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+<<<<<<< HEAD
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:crm/utils/preference_service.dart';
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
 enum LoginMethod { mobile, whatsapp, mail, sms }
 
@@ -60,10 +63,24 @@ class _SignInScreenState extends State<SignInScreen> {
 
       const String apiUrl = 'https://erpsmart.in/total/api/m_api/';
 
+<<<<<<< HEAD
       String currentCid = await PreferenceService.getCid();
 
       Map<String, String> body = {
         'cid': currentCid,
+=======
+      debugPrint("------------ SIGN IN API REQUEST ------------");
+      debugPrint("URL: $apiUrl");
+      debugPrint("TYPE: 3001");
+      debugPrint("CID: 21472147");
+      debugPrint("INPUT: $inputValue");
+      debugPrint("METHOD: $_selectedMethod");
+      debugPrint("DEVICE ID: $deviceId");
+      debugPrint("LAT: $lt  LNG: $ln");
+
+      Map<String, String> body = {
+        'cid': '21472147',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         'type': '3001',
         'device_id': deviceId,
         'ln': ln,
@@ -75,9 +92,16 @@ class _SignInScreenState extends State<SignInScreen> {
         body['email'] = inputValue;
       } else if (_selectedMethod == LoginMethod.whatsapp) {
         body['wp_number'] = inputValue;
+<<<<<<< HEAD
         body['mobile'] = inputValue;
       } else {
         body['mobile'] = inputValue;
+=======
+        body['number'] =
+            inputValue; // Usually both are expected if not specified
+      } else {
+        body['number'] = inputValue;
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
       }
 
       final response = await http.post(Uri.parse(apiUrl), body: body);
@@ -92,6 +116,7 @@ class _SignInScreenState extends State<SignInScreen> {
         String message = responseData['error_msg'] ?? 'Something went wrong';
 
         if (!error) {
+<<<<<<< HEAD
           // Store token, cus_id, cid, and comp_name from 3001 response
           if (responseData['token'] != null) {
             await PreferenceService.setToken(
@@ -114,14 +139,22 @@ class _SignInScreenState extends State<SignInScreen> {
             );
           }
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           if (mounted) {
             _showOTPDialog();
           }
         } else {
           if (mounted) {
+<<<<<<< HEAD
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(message), backgroundColor: Colors.red),
             );
+=======
+            ScaffoldMessenger.of(
+              context,
+            ).showSnackBar(SnackBar(content: Text(message)));
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           }
         }
       } else {
@@ -217,10 +250,17 @@ class _SignInScreenState extends State<SignInScreen> {
                         width: screenWidth * 0.7,
                       ),
                       const SizedBox(height: 7),
+<<<<<<< HEAD
                       // Image.asset(
                       //   'assets/images/TOTAL ERP.png',
                       //   width: screenWidth * 0.45,
                       // ),
+=======
+                      Image.asset(
+                        'assets/images/TOTAL ERP.png',
+                        width: screenWidth * 0.45,
+                      ),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                       SizedBox(height: screenHeight * 0.06),
                       Align(
                         alignment: Alignment.centerLeft,
@@ -274,7 +314,11 @@ class _SignInScreenState extends State<SignInScreen> {
                             borderSide: BorderSide(color: Color(0xffA2A2A2)),
                           ),
                           focusedBorder: const UnderlineInputBorder(
+<<<<<<< HEAD
                             borderSide: BorderSide(color: Color(0xFF26A69A)),
+=======
+                            borderSide: BorderSide(color: Color(0xFF6B4195)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           ),
                         ),
                       ),
@@ -285,7 +329,11 @@ class _SignInScreenState extends State<SignInScreen> {
                         child: ElevatedButton(
                           onPressed: _isLoading ? null : _handleSignIn,
                           style: ElevatedButton.styleFrom(
+<<<<<<< HEAD
                             backgroundColor: const Color(0xFF26A69A),
+=======
+                            backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
@@ -387,7 +435,11 @@ class _SignInScreenState extends State<SignInScreen> {
                             const Text(
                               'Terms and Conditions',
                               style: TextStyle(
+<<<<<<< HEAD
                                 color: Color(0xFF26A69A),
+=======
+                                color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                                 fontWeight: FontWeight.w700,
                                 fontSize: 12,
                               ),
@@ -429,7 +481,11 @@ class _SignInScreenState extends State<SignInScreen> {
               style: TextStyle(color: Color(0xFF60D669), fontSize: 12),
             ),
             style: OutlinedButton.styleFrom(
+<<<<<<< HEAD
               side: BorderSide(color: const Color(0xFF26A69A).withAlpha(127)),
+=======
+              side: BorderSide(color: const Color(0xFF6B4195).withAlpha(127)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -450,6 +506,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 _selectedMethod = LoginMethod.mail;
               });
             },
+<<<<<<< HEAD
             icon: const Icon(Icons.mail, color: Color(0xFF26A69A)),
             label: const Text(
               'Via Mail',
@@ -458,6 +515,16 @@ class _SignInScreenState extends State<SignInScreen> {
             style: OutlinedButton.styleFrom(
               side: BorderSide(
                 color: const Color(0xFF26A69A).withAlpha(127),
+=======
+            icon: const Icon(Icons.mail, color: Color(0xFF6B4195)),
+            label: const Text(
+              'Via Mail',
+              style: TextStyle(color: Color(0xFF6B4195)),
+            ),
+            style: OutlinedButton.styleFrom(
+              side: BorderSide(
+                color: const Color(0xFF6B4195).withAlpha(127),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 width: 1.5,
               ),
 
@@ -483,6 +550,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 _selectedMethod = LoginMethod.sms;
               });
             },
+<<<<<<< HEAD
             icon: const Icon(Icons.smartphone, color: Color(0xFF26A69A)),
             label: const Text(
               'Via SMS',
@@ -490,6 +558,15 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             style: OutlinedButton.styleFrom(
               side: BorderSide(color: const Color(0xFF26A69A).withAlpha(127)),
+=======
+            icon: const Icon(Icons.smartphone, color: Color(0xFF6B4195)),
+            label: const Text(
+              'Via SMS',
+              style: TextStyle(color: Color(0xFF6B4195)),
+            ),
+            style: OutlinedButton.styleFrom(
+              side: BorderSide(color: const Color(0xFF6B4195).withAlpha(127)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -513,10 +590,17 @@ class _SignInScreenState extends State<SignInScreen> {
             icon: const Icon(Icons.smartphone, color: Colors.blue),
             label: const Text(
               'Via SMS',
+<<<<<<< HEAD
               style: TextStyle(color: Color(0xFF26A69A)),
             ),
             style: OutlinedButton.styleFrom(
               side: BorderSide(color: const Color(0xFF26A69A).withAlpha(127)),
+=======
+              style: TextStyle(color: Color(0xFF6B4195)),
+            ),
+            style: OutlinedButton.styleFrom(
+              side: BorderSide(color: const Color(0xFF6B4195).withAlpha(127)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -552,10 +636,13 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
     (_) => TextEditingController(),
   );
 
+<<<<<<< HEAD
   final List<FocusNode> _focusNodes = List.generate(6, (_) => FocusNode());
 
   bool _isLoading = false;
   String? _errorMessage;
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   int _timerSeconds = 60;
   Timer? _timer;
   late TapGestureRecognizer _tapRecognizer;
@@ -565,6 +652,7 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
     super.initState();
     _startTimer();
     _tapRecognizer = TapGestureRecognizer()..onTap = widget.onWrongInput;
+<<<<<<< HEAD
 
     // Initialize focus nodes with key events handling
     for (int i = 0; i < 6; i++) {
@@ -579,15 +667,20 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
         return KeyEventResult.ignored;
       };
     }
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   }
 
   @override
   void dispose() {
     _timer?.cancel();
     _tapRecognizer.dispose();
+<<<<<<< HEAD
     for (var node in _focusNodes) {
       node.dispose();
     }
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     for (var controller in _otpControllers) {
       controller.dispose();
     }
@@ -616,6 +709,7 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
     return '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}';
   }
 
+<<<<<<< HEAD
   Future<void> _verifyOTP() async {
     String otp = _otpControllers.map((controller) => controller.text).join();
     if (otp.length != 6) {
@@ -791,6 +885,8 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
     }
   }
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -866,6 +962,7 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
                   width: 45,
                   child: TextField(
                     controller: _otpControllers[index],
+<<<<<<< HEAD
                     focusNode: _focusNodes[index],
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
@@ -873,6 +970,11 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
                       FilteringTextInputFormatter.digitsOnly,
                       LengthLimitingTextInputFormatter(6), // Allow 6 for paste
                     ],
+=======
+                    textAlign: TextAlign.center,
+                    keyboardType: TextInputType.number,
+                    maxLength: 1,
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                     style: TextStyle(
                       color: Theme.of(context).textTheme.bodyLarge?.color,
                     ),
@@ -880,17 +982,26 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
                       counterText: "",
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
+<<<<<<< HEAD
                         borderSide: const BorderSide(color: Color(0xFF26A69A)),
+=======
+                        borderSide: const BorderSide(color: Color(0xFF6B4195)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
                         borderSide: const BorderSide(
+<<<<<<< HEAD
                           color: Color(0xFF26A69A),
+=======
+                          color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           width: 2,
                         ),
                       ),
                     ),
                     onChanged: (value) {
+<<<<<<< HEAD
                       if (_errorMessage != null) {
                         setState(() {
                           _errorMessage = null;
@@ -912,12 +1023,17 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
                         _focusNodes[nextToFocus].requestFocus();
                       } else if (value.isNotEmpty && index < 5) {
                         _focusNodes[index + 1].requestFocus();
+=======
+                      if (value.isNotEmpty && index < 5) {
+                        FocusScope.of(context).nextFocus();
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                       }
                     },
                   ),
                 ),
               ),
             ),
+<<<<<<< HEAD
             if (_errorMessage != null) ...[
               const SizedBox(height: 8),
               Text(
@@ -925,6 +1041,8 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
                 style: const TextStyle(color: Colors.red, fontSize: 14),
               ),
             ],
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -935,7 +1053,11 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
                     'Resend OTP',
                     style: TextStyle(
                       color: _timerSeconds == 0
+<<<<<<< HEAD
                           ? const Color(0xFF26A69A)
+=======
+                          ? const Color(0xFF6B4195)
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           : (Theme.of(context).textTheme.bodyMedium?.color ??
                                     Colors.black)
                                 .withOpacity(0.7),
@@ -948,7 +1070,11 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
                 Text(
                   _formatTimer(),
                   style: const TextStyle(
+<<<<<<< HEAD
                     color: Color(0xFF26A69A),
+=======
+                    color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -959,13 +1085,38 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
               width: double.infinity,
               height: 55,
               child: ElevatedButton(
+<<<<<<< HEAD
                 onPressed: _isLoading ? null : _verifyOTP,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF26A69A),
+=======
+                onPressed: () {
+                  String otp = _otpControllers
+                      .map((controller) => controller.text)
+                      .join();
+                  if (otp.length == 6) {
+                    Navigator.pop(context); // Close OTP bottom sheet
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DashboardScreen(),
+                      ),
+                      (route) => false,
+                    );
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Please enter 6-digit OTP')),
+                    );
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
+<<<<<<< HEAD
                 child: _isLoading
                     ? const SizedBox(
                         width: 24,
@@ -983,6 +1134,16 @@ class _OTPBottomSheetState extends State<OTPBottomSheet> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+=======
+                child: Text(
+                  'Verify',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: screenWidth * 0.045,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               ),
             ),
             const SizedBox(height: 20),

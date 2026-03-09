@@ -17,7 +17,10 @@ pluginManagement {
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 plugins {
     id("dev.flutter.flutter-plugin-loader") version "1.0.0"
     id("com.android.application") version "8.11.1" apply false

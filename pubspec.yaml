@@ -43,12 +43,19 @@ dependencies:
   shared_preferences: ^2.2.3
   google_sign_in: 6.2.1
   sign_in_with_apple: ^7.0.1
+<<<<<<< HEAD
   firebase_core: any
   firebase_auth: any
   provider: ^6.1.1
   local_auth: ^2.3.0
   firebase_messaging: any
   flutter_local_notifications: any
+=======
+  firebase_core: ^4.4.0
+  firebase_auth: ^6.1.4
+  provider: ^6.1.1
+
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
 
 dev_dependencies:

@@ -7,8 +7,13 @@ class AddMeetingScreen extends StatefulWidget {
   State<AddMeetingScreen> createState() => _AddMeetingScreenState();
 }
 
+<<<<<<< HEAD
 class _AddMeetingScreenState extends State<AddMeetingScreen> { 
   final Color primaryPurple = const Color(0xFF26A69A);
+=======
+class _AddMeetingScreenState extends State<AddMeetingScreen> {
+  final Color primaryPurple = const Color(0xFF6B4195);
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   String? _selectedMeetingType;
   bool _isMeetingTypeExpanded = false;
 

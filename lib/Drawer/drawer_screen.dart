@@ -1,14 +1,22 @@
 import 'package:crm/Meeting/meeting_screen.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:crm/Reports/report_screen.dart';
 import 'package:crm/services/profile_service.dart';
 import '../Home/dashboard_screen.dart';
 import '../Settings/account_setting_screen.dart';
+=======
+import '../Home/dashboard_screen.dart';
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 import '../Settings/setting_screen.dart';
 import '../Leads/leads_screen.dart';
 import '../Deals/deal_lost.dart';
 import '../Deals/deal_won.dart';
+<<<<<<< HEAD
 import '../utils/preference_service.dart';
+=======
+import '../Reports/report_screen.dart';
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({super.key});
@@ -21,6 +29,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
   bool _isFollowUpExpanded = false;
   bool _isDealsExpanded = false;
 
+<<<<<<< HEAD
   String _name = 'Loading...';
   String _email = '...';
   String _mobile = '...';
@@ -60,6 +69,8 @@ class _DrawerScreenState extends State<DrawerScreen> {
     }
   }
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -75,7 +86,11 @@ class _DrawerScreenState extends State<DrawerScreen> {
               right: 20,
             ),
             decoration: const BoxDecoration(
+<<<<<<< HEAD
               color: Color(0xFF26A69A),
+=======
+              color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(100),
               ),
@@ -100,6 +115,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     Positioned(
                       bottom: 0,
                       right: 0,
+<<<<<<< HEAD
                       child: InkWell(
                         onTap: () {
                           Navigator.push(
@@ -120,15 +136,33 @@ class _DrawerScreenState extends State<DrawerScreen> {
                             color: Color(0xFF26A69A),
                             size: 20,
                           ),
+=======
+                      child: Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.edit_note,
+                          color: Color(0xFF6B4195),
+                          size: 20,
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                         ),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 12),
+<<<<<<< HEAD
                 Text(
                   _name,
                   style: const TextStyle(
+=======
+                const Text(
+                  'Harish',
+                  style: TextStyle(
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                     color: Colors.white,
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -136,14 +170,29 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 ),
                 const SizedBox(height: 4),
                 Text(
+<<<<<<< HEAD
                   _email,
+=======
+                  'hariharansgs@app.in',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.9),
                     fontSize: 15,
                   ),
                 ),
                 Text(
+<<<<<<< HEAD
                   _mobile,
+=======
+                  '+91 98765 43210',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.9),
+                    fontSize: 15,
+                  ),
+                ),
+                Text(
+                  'Coimbatore',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.9),
                     fontSize: 15,
@@ -159,17 +208,25 @@ class _DrawerScreenState extends State<DrawerScreen> {
               padding: EdgeInsets.zero,
               children: [
                 _buildDrawerItem(
+<<<<<<< HEAD
                   icon: Image.asset(
                     'assets/icons/leads.png',
                     color: const Color(0xFF26A69A),
                   ),
+=======
+                  icon: Image.asset('assets/icons/leads.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   title: 'Leads',
                 ),
                 _buildDivider(),
                 _buildDrawerItem(
                   icon: Image.asset(
                     'assets/icons/follows.png',
+<<<<<<< HEAD
                     color: const Color(0xFF26A69A),
+=======
+                    color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   ),
                   title: 'Follow Up',
                   hasTrailing: true,
@@ -191,7 +248,11 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         _buildSubMenuItem(
                           icon: Image.asset(
                             'assets/icons/follows.png',
+<<<<<<< HEAD
                             color: const Color(0xFF26A69A),
+=======
+                            color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           ),
                           title: 'Today Follow up',
                           onTap: () {
@@ -209,10 +270,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         ),
                         const SizedBox(height: 8),
                         _buildSubMenuItem(
+<<<<<<< HEAD
                           icon: Image.asset(
                             'assets/icons/missed1.png',
                             color: const Color(0xFF26A69A),
                           ),
+=======
+                          icon: Image.asset('assets/icons/missed1.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           title: 'Missed Follow up',
                           onTap: () {
                             Navigator.pop(context);
@@ -230,10 +295,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
 
                         const SizedBox(height: 8),
                         _buildSubMenuItem(
+<<<<<<< HEAD
                           icon: Image.asset(
                             'assets/icons/upcoming.png',
                             color: const Color(0xFF26A69A),
                           ),
+=======
+                          icon: Image.asset('assets/icons/upcoming.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           title: 'Upcoming Follow up',
                           onTap: () {
                             Navigator.pop(context);
@@ -250,10 +319,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         ),
                         const SizedBox(height: 8),
                         _buildSubMenuItem(
+<<<<<<< HEAD
                           icon: Image.asset(
                             'assets/icons/reshedule.png',
                             color: const Color(0xFF26A69A),
                           ),
+=======
+                          icon: Image.asset('assets/icons/reshedule.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           title: 'Re Follow up',
                           onTap: () {
                             Navigator.pop(context);
@@ -274,10 +347,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 ],
                 _buildDivider(),
                 _buildDrawerItem(
+<<<<<<< HEAD
                   icon: Image.asset(
                     'assets/icons/meeting1.png',
                     color: const Color(0xFF26A69A),
                   ),
+=======
+                  icon: Image.asset('assets/icons/meeting1.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   title: 'Meeting / Visit',
                   onTap: () {
                     Navigator.pop(context);
@@ -291,10 +368,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 ),
                 _buildDivider(),
                 _buildDrawerItem(
+<<<<<<< HEAD
                   icon: Image.asset(
                     'assets/icons/deals1.png',
                     color: const Color(0xFF26A69A),
                   ),
+=======
+                  icon: Image.asset('assets/icons/deals1.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   title: 'Deals',
                   hasTrailing: true,
                   isExpanded: _isDealsExpanded,
@@ -313,10 +394,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     child: Column(
                       children: [
                         _buildSubMenuItem(
+<<<<<<< HEAD
                           icon: Image.asset(
                             'assets/icons/deals1.png',
                             color: const Color(0xFF26A69A),
                           ),
+=======
+                          icon: Image.asset('assets/icons/deals1.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           title: 'Deal Won',
                           onTap: () {
                             Navigator.pop(context);
@@ -330,10 +415,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         ),
                         const SizedBox(height: 8),
                         _buildSubMenuItem(
+<<<<<<< HEAD
                           icon: Image.asset(
                             'assets/icons/deal-lost.png',
                             color: const Color(0xFF26A69A),
                           ),
+=======
+                          icon: Image.asset('assets/icons/deal-lost.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                           title: 'Deal lost',
                           onTap: () {
                             Navigator.pop(context);
@@ -351,18 +440,26 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 ],
                 _buildDivider(),
                 _buildDrawerItem(
+<<<<<<< HEAD
                   icon: Image.asset(
                     'assets/icons/reports.png',
                     color: const Color(0xFF26A69A),
                   ),
+=======
+                  icon: Image.asset('assets/icons/reports.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   title: 'Report',
                 ),
                 _buildDivider(),
                 _buildDrawerItem(
+<<<<<<< HEAD
                   icon: Image.asset(
                     'assets/icons/settings.png',
                     color: const Color(0xFF26A69A),
                   ),
+=======
+                  icon: Image.asset('assets/icons/settings.png'),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   title: 'Settings',
                 ),
                 _buildDivider(),
@@ -394,7 +491,11 @@ class _DrawerScreenState extends State<DrawerScreen> {
       trailing: hasTrailing
           ? Icon(
               isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down,
+<<<<<<< HEAD
               color: const Color(0xFF26A69A),
+=======
+              color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             )
           : null,
       onTap:

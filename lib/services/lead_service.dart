@@ -2,11 +2,15 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import '../SignIn/splash.dart';
+<<<<<<< HEAD
 import '../utils/preference_service.dart';
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
 class LeadService {
   static const String _apiUrl = 'https://erpsmart.in/total/api/m_api/';
 
+<<<<<<< HEAD
   /// Safely attempts to decode a JSON response.
   /// Returns an error map if the body is not valid JSON.
   static Map<String, dynamic> _safeDecodeJson(String body) {
@@ -34,6 +38,8 @@ class LeadService {
     }
   }
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   static Future<List<dynamic>> fetchFollowUpHistory({
     required String leadNo,
   }) async {
@@ -42,18 +48,27 @@ class LeadService {
       String ln = SplashScreen.ln ?? '43432323';
       String lt = SplashScreen.lt ?? '23233443';
 
+<<<<<<< HEAD
       String currentCid = await PreferenceService.getCid();
       String? token = await PreferenceService.getToken();
 
       final Map<String, String> body = {
         'type': '3005',
         'cid': currentCid,
+=======
+      final Map<String, String> body = {
+        'type': '3005',
+        'cid': '21472147',
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         'lt': lt,
         'ln': ln,
         'device_id': deviceId,
         'uid': '002', // Assuming UID 002 based on previous grep for 3003
         'no': leadNo,
+<<<<<<< HEAD
         if (token != null) 'token': token,
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
       };
 
       debugPrint("------------ FETCH FOLLOW-UP HISTORY REQUEST ------------");
@@ -90,6 +105,7 @@ class LeadService {
     }
     return [];
   }
+<<<<<<< HEAD
 
   static Future<Map<String, dynamic>> addLead(
     Map<String, String> leadData, {
@@ -413,4 +429,6 @@ class LeadService {
     }
     return [];
   }
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 }

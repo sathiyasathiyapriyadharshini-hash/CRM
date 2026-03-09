@@ -14,7 +14,11 @@ class DealsScreen extends StatefulWidget {
 class _DealsScreenState extends State<DealsScreen> {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     const Color primaryPurple = Color(0xFF26A69A);
+=======
+    const Color primaryPurple = Color(0xFF6B4195);
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     final Size size = MediaQuery.of(context).size;
     final double screenWidth = size.width;
 
@@ -279,12 +283,19 @@ class _DealsScreenState extends State<DealsScreen> {
         children: [
           Image.asset(
             'assets/icons/call_purple.png',
+<<<<<<< HEAD
              color: const Color(0xFF26A69A),
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             width: screenWidth * 0.06,
             height: screenWidth * 0.06,
             errorBuilder: (context, error, stackTrace) => Icon(
               Icons.phone_callback_rounded,
+<<<<<<< HEAD
               color: const Color(0xFF26A69A),
+=======
+              color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               size: screenWidth * 0.06,
             ),
           ),

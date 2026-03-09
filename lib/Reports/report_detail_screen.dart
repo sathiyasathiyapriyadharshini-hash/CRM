@@ -146,7 +146,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
               child: const Text(
                 'PDF',
                 style: TextStyle(
+<<<<<<< HEAD
                   color: Color(0xFF26A69A),
+=======
+                  color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -159,7 +163,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
               child: const Text(
                 'DOCS',
                 style: TextStyle(
+<<<<<<< HEAD
                   color: Color(0xFF26A69A),
+=======
+                  color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -192,7 +200,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+<<<<<<< HEAD
                   const CircularProgressIndicator(color: Color(0xFF26A69A)),
+=======
+                  const CircularProgressIndicator(color: Color(0xFF6B4195)),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                   const SizedBox(height: 16),
                   Text(
                     'Downloading Report...',
@@ -228,7 +240,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: const Color(0xFF26A69A),
+=======
+        backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         elevation: 0,
         leading: IconButton(
           icon: Icon(
@@ -268,7 +284,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
                 style: TextStyle(
                   fontSize: screenWidth * 0.045,
                   fontWeight: FontWeight.bold,
+<<<<<<< HEAD
                   color: const Color(0xFF26A69A),
+=======
+                  color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 ),
               ),
             ),
@@ -277,7 +297,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
               width: screenWidth,
               padding: EdgeInsets.all(screenWidth * 0.04),
               decoration: const BoxDecoration(
+<<<<<<< HEAD
                 color: Color(0xFF26A69A),
+=======
+                color: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 // Removed borderRadius for full-width effect
               ),
               child: Row(
@@ -419,7 +443,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
+<<<<<<< HEAD
                     backgroundColor: const Color(0xFF26A69A),
+=======
+                    backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -446,7 +474,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
+<<<<<<< HEAD
                     backgroundColor: const Color(0xFF26A69A),
+=======
+                    backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -480,7 +512,11 @@ class _ReportDetailScreenState extends State<ReportDetailScreen> {
             child: Text(
               label,
               style: TextStyle(
+<<<<<<< HEAD
                 color: const Color(0xFF26A69A),
+=======
+                color: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 fontSize: screenWidth * 0.038,
                 fontWeight: FontWeight.w400,
               ),

@@ -114,7 +114,11 @@ class _AppPreferenceScreenState extends State<AppPreferenceScreen> {
         value: value,
         onChanged: onChanged,
         activeColor: Colors.white,
+<<<<<<< HEAD
         activeTrackColor: const Color(0xFF26A69A),
+=======
+        activeTrackColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
       ),
     );
   }

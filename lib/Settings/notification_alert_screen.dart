@@ -18,7 +18,11 @@ class _NotificationAlertScreenState extends State<NotificationAlertScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: const Color(0xFF26A69A),
+=======
+        backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -124,12 +128,20 @@ class _NotificationAlertScreenState extends State<NotificationAlertScreen> {
           value: value,
           onChanged: onChanged,
           activeColor: Colors.white,
+<<<<<<< HEAD
           activeTrackColor: const Color(0xFF26A69A),
+=======
+          activeTrackColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           inactiveThumbColor: Colors.white,
           inactiveTrackColor: Colors.grey.shade300,
           thumbIcon: showTick && value
               ? MaterialStateProperty.all(
+<<<<<<< HEAD
                   const Icon(Icons.check, color: Color(0xFF26A69A), size: 16),
+=======
+                  const Icon(Icons.check, color: Color(0xFF6B4195), size: 16),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
                 )
               : null,
         ),

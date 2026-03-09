@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import 'package:crm/Home/dashboard_screen.dart';
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 import 'package:crm/SignIn/signin.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -6,7 +9,10 @@ import 'dart:io';
 import 'package:geolocator/geolocator.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+<<<<<<< HEAD
 import '../utils/preference_service.dart';
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
 class SplashScreen extends StatefulWidget {
   static String? lt;
@@ -26,11 +32,14 @@ class _SplashScreenState extends State<SplashScreen> {
   bool _isLoading = true;
   String _statusMessage = "Initializing...";
 
+<<<<<<< HEAD
   // Default values as fallback
   static const String defaultLt = '23233443';
   static const String defaultLn = '43432323';
   static const String defaultDeviceId = '3453489';
 
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   @override
   void initState() {
     super.initState();
@@ -38,6 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> _initData() async {
+<<<<<<< HEAD
     try {
       // Fetch data
       setState(() => _statusMessage = "Fetching Device ID...");
@@ -95,6 +105,34 @@ class _SplashScreenState extends State<SplashScreen> {
       }
     } catch (e) {
       debugPrint("Error in _proceedToApp: $e");
+=======
+    while (mounted &&
+        (latitude == null || longitude == null || deviceId == null)) {
+      try {
+        setState(() => _statusMessage = "Fetching Device ID...");
+        await _fetchDeviceId();
+
+        setState(() => _statusMessage = "Fetching Location...");
+        await _fetchLocation();
+
+        if (latitude == null || longitude == null) {
+          // If we still don't have location, it might be because services are off or permission denied
+          await Future.delayed(const Duration(seconds: 2));
+          continue;
+        }
+      } catch (e) {
+        debugPrint("Error fetching data: $e");
+        setState(() => _statusMessage = "Error fetching details. Retrying...");
+        await Future.delayed(const Duration(seconds: 2));
+      }
+    }
+
+    if (mounted) {
+      setState(() {
+        _isLoading = false;
+        _statusMessage = "Done!";
+      });
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
       _navigateToSignIn();
     }
   }
@@ -103,6 +141,7 @@ class _SplashScreenState extends State<SplashScreen> {
     bool serviceEnabled;
     LocationPermission permission;
 
+<<<<<<< HEAD
     try {
       serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
@@ -133,6 +172,40 @@ class _SplashScreenState extends State<SplashScreen> {
       }
 
       setState(() => _statusMessage = "Getting current location...");
+=======
+    // Check if location services are enabled
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      setState(() => _statusMessage = "Please enable Location Services (GPS)");
+      // Optionally open settings automatically or wait for user
+      // await Geolocator.openLocationSettings();
+      return;
+    }
+
+    // Check for permissions
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      setState(() => _statusMessage = "Requesting Location Permission...");
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        setState(() => _statusMessage = "Location permission denied");
+        return;
+      }
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      setState(
+        () => _statusMessage =
+            "Location permission permanently denied. Please enable in Settings.",
+      );
+      // await Geolocator.openAppSettings();
+      return;
+    }
+
+    // If we have permission and service, get the position
+    setState(() => _statusMessage = "Getting current location...");
+    try {
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
       Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high,
         timeLimit: const Duration(seconds: 10),
@@ -152,6 +225,7 @@ class _SplashScreenState extends State<SplashScreen> {
         await prefs.setString('lt', latitude!);
         await prefs.setString('ln', longitude!);
       }
+<<<<<<< HEAD
     } catch (e) {
       debugPrint("Error fetching location: $e");
       _useDefaultLocation();
@@ -166,6 +240,15 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
+=======
+      debugPrint("Lat: $latitude, Lon: $longitude");
+    } catch (e) {
+      debugPrint("Error getting position: $e");
+      setState(() => _statusMessage = "Error getting location. Retrying...");
+    }
+  }
+
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
   Future<void> _fetchDeviceId() async {
     if (deviceId != null) return;
 
@@ -179,6 +262,7 @@ class _SplashScreenState extends State<SplashScreen> {
         deviceId = iosInfo.identifierForVendor;
       }
 
+<<<<<<< HEAD
       SplashScreen.deviceId = deviceId ?? defaultDeviceId;
 
       if (SplashScreen.deviceId != null) {
@@ -189,6 +273,17 @@ class _SplashScreenState extends State<SplashScreen> {
     } catch (e) {
       debugPrint("Error fetching device ID: $e");
       SplashScreen.deviceId = defaultDeviceId;
+=======
+      SplashScreen.deviceId = deviceId;
+
+      if (deviceId != null) {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('device_id', deviceId!);
+      }
+      debugPrint("Device ID: $deviceId");
+    } catch (e) {
+      debugPrint("Error fetching device ID: $e");
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
     }
   }
 
@@ -208,6 +303,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+<<<<<<< HEAD
       body: GestureDetector(
         onTap: () {
           if (!_isLoading && _statusMessage.toLowerCase().contains("retry")) {
@@ -238,6 +334,27 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
                 const SizedBox(height: 20),
               ],
+=======
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/smart.png', width: screenWidth * 0.6),
+            const SizedBox(height: 10),
+            Image.asset(
+              'assets/images/TOTAL ERP.png',
+              width: screenWidth * 0.35,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white
+                  : null,
+            ),
+            const SizedBox(height: 40),
+            if (_isLoading) ...[
+              const CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.purple),
+              ),
+              const SizedBox(height: 20),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: Text(
@@ -250,6 +367,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
               ),
+<<<<<<< HEAD
               if (!_isLoading &&
                   _statusMessage.toLowerCase().contains("retry")) ...[
                 const SizedBox(height: 20),
@@ -257,6 +375,10 @@ class _SplashScreenState extends State<SplashScreen> {
               ],
             ],
           ),
+=======
+            ],
+          ],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         ),
       ),
     );

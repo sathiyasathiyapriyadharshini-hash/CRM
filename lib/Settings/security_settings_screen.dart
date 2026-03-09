@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import 'package:crm/utils/biometric_service.dart';
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 import 'package:flutter/material.dart';
 
 class SecuritySettingsScreen extends StatefulWidget {
@@ -11,6 +14,7 @@ class SecuritySettingsScreen extends StatefulWidget {
 class _SecuritySettingsScreenState extends State<SecuritySettingsScreen> {
   bool securityAlert = true;
   bool dataSharing = true;
+<<<<<<< HEAD
   bool biometricEnabled = false;
 
   @override
@@ -25,12 +29,18 @@ class _SecuritySettingsScreenState extends State<SecuritySettingsScreen> {
       biometricEnabled = enabled;
     });
   }
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: const Color(0xFF26A69A),
+=======
+        backgroundColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -66,6 +76,7 @@ class _SecuritySettingsScreenState extends State<SecuritySettingsScreen> {
               securityAlert,
               (val) => setState(() => securityAlert = val),
             ),
+<<<<<<< HEAD
             const SizedBox(height: 12),
             _buildToggleItem(
               'Biometric Lock',
@@ -92,6 +103,8 @@ class _SecuritySettingsScreenState extends State<SecuritySettingsScreen> {
                 setState(() => biometricEnabled = val);
               },
             ),
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
             const SizedBox(height: 24),
             _buildSectionHeader('Privacy Setting'),
             _buildItem(
@@ -221,7 +234,11 @@ class _SecuritySettingsScreenState extends State<SecuritySettingsScreen> {
           value: value,
           onChanged: onChanged,
           activeColor: Colors.white,
+<<<<<<< HEAD
           activeTrackColor: const Color(0xFF26A69A),
+=======
+          activeTrackColor: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
         ),
       ),
     );

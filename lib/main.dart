@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 import 'package:crm/utils/notification_service.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+=======
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
 import 'package:crm/SignIn/splash.dart';
 import 'package:crm/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+<<<<<<< HEAD
 import 'firebase_options.dart';
 
 void main() async {
@@ -22,6 +26,17 @@ await Firebase.initializeApp(
     MultiProvider(
       providers: [ChangeNotifierProvider(create: (_) => ThemeProvider())],
 
+=======
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+      ],
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
       child: const MyApp(),
     ),
   );
@@ -40,8 +55,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         colorScheme: ColorScheme.fromSeed(
+<<<<<<< HEAD
           seedColor: const Color(0xFF26A69A),
           primary: const Color(0xFF26A69A),
+=======
+          seedColor: const Color(0xFF6B4195),
+          primary: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           surface: Colors.white,
           background: const Color(0xFFF8F9FA),
         ),
@@ -49,7 +69,11 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         scaffoldBackgroundColor: const Color(0xFFF8F9FA),
         appBarTheme: const AppBarTheme(
+<<<<<<< HEAD
           backgroundColor: Color(0xFF26A69A),
+=======
+          backgroundColor: Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           foregroundColor: Colors.white,
           elevation: 0,
         ),
@@ -57,8 +81,13 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         colorScheme: ColorScheme.fromSeed(
+<<<<<<< HEAD
           seedColor: const Color(0xFF26A69A),
           primary: const Color(0xFF26A69A),
+=======
+          seedColor: const Color(0xFF6B4195),
+          primary: const Color(0xFF6B4195),
+>>>>>>> 5271cc96814591a548bd1c0b01a88df5c62cd342
           brightness: Brightness.dark,
           surface: const Color(0xFF1E1E1E),
           background: const Color(0xFF121212),
